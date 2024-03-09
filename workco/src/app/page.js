@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Home() {
+function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
@@ -110,4 +110,28 @@ export default function Home() {
       </div>
     </main>
   );
+}
+
+// TODO: If the client is not logged in display the information page.
+// TODO: If they are logged in, display their "virtual space".
+
+/* TODO: fix this
+export async function getServerSideProps(context) {
+  const cookies = parseCookies(context);
+
+  if (!cookies['loggedIn']) {
+    return {
+      redirect: {
+        destination: '/login',
+        permanent: false
+      }
+    }
+  }
+}
+*/
+import HomePage from '@/app/components/HomePage'
+
+export default function Page() {
+  // * The client is logged in.
+  return (<HomePage />)
 }
