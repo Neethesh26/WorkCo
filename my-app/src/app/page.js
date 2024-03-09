@@ -1,6 +1,9 @@
 import Image from "next/image";
 
-export default function Home() {
+// TODO: If the user is not logged in, redirect them to the /login endpoint OR an introduction page for their app (if there is time).
+// TODO: If the user IS logged in, return the three.js canvas.
+
+function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
@@ -110,4 +113,14 @@ export default function Home() {
       </div>
     </main>
   );
+}
+
+export default Home
+
+function Introduction() {
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+
+    </main>
+  )
 }
