@@ -5,6 +5,7 @@ import * as THREE from 'three';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { Image } from 'three';
+import ToDoList from '@/app/components/ToDoList';
 
 export default function HomePage() {
   const divRef = useRef(null);
@@ -191,5 +192,8 @@ export default function HomePage() {
     }
   }, []);
 
-  return <div><div ref={divRef} /> <Image /></div>;
+  return (
+  <div> 
+    <div ref={divRef} />
+  </div>);
 }

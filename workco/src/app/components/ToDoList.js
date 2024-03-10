@@ -28,7 +28,7 @@ export default function ToDoList() {
     };
 
     return (
-        <div className="flex items-center justify-center h-screen bg-gray-100">
+        <div className="flex items-center justify-center h-screen bg-[#fff1cc]">
         <Head>
             <title>To-Do List</title>
         </Head>
