@@ -49,7 +49,7 @@ body{
     /*border:1px solid rgba(255,255,255,.1);*/
   }
   .count{
-    width:100%;
+    width:auto;
     color:#000000;
     height:100%;
     padding:50px;
@@ -58,6 +58,8 @@ body{
     line-height:50px;
     position:absolute;
     text-align:center;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .count:after{
     width:100%;
@@ -66,7 +68,10 @@ body{
     font-weight:300;
     line-height:18px;
     text-align:center;
-    position:relative;
+    position:absolute;
+    top: calc(100% - 80px);
+    left: 50%;
+    transform: translateX(-50%);
   }
   .count.sec:after{content:'sec'}
   .count.min:after{content:'min'}
