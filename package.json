@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "draco": "^0.0.1"
+    "draco": "^0.0.1",
+    "react-icons": "^5.0.1"
   }
 }

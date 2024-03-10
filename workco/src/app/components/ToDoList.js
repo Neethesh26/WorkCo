@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Head from 'next/head';
 
 export default function ToDoList() {
-    const [tasks, setTasks] = useState([]);
+    const [tasks, setTasks] = useState([{text: "Finish workco project", completed: false }, {text: "Go to the gym", completed: true }, {text: "Eat dinner", completed: false }]);
     const [taskInput, setTaskInput] = useState('');
 
     const addTask = (e) => {
@@ -28,12 +28,12 @@ export default function ToDoList() {
     };
 
     return (
-        <div className="flex items-center justify-center h-screen bg-gray-100">
+        <div className="flex items-center justify-center h-screen bg-[#fff1cc]">
         <Head>
             <title>To-Do List</title>
         </Head>
 
-        <div className="w-1/4 bg-white rounded-lg shadow-xl">
+        <div className=" bg-white rounded-lg shadow-xl">
             <div className="flex flex-col items-center p-6">
             <h1 className="text-2xl font-bold mb-4">TO-DO LIST</h1>
             
@@ -65,14 +65,14 @@ export default function ToDoList() {
                         checked={task.completed}
                         onChange={() => toggleTaskCompletion(index)}
                     />
-                    <span className={`flex-1 text-grey-darker ${task.completed ? 'line-through text-gray-400' : ''}`}>
+                    <span className={`flex-1 text-wrap text-grey-darker ${task.completed ? 'line-through text-gray-400' : ''}`}>
                         {task.text}
                     </span>
                     <button
                         onClick={() => deleteTask(index)}
-                        className="text-sm bg-red-500 hover:bg-red-600 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
+                        className="text-sm hover:bg-red-600 text-black py-1 px-2 rounded-[9999px] focus:outline-none focus:shadow-outline"
                     >
-                        Delete
+                        X
                     </button>
                     </li>
                 ))}
