@@ -22,19 +22,21 @@ export default function HomePage() {
     };
 
     return (
-        <div className={`flex ${joinClicked ? 'justify-center' : 'justify-between'} items-center h-screen px-[800px]`}>
-            {!joinClicked &&
-            <>
-            <button className="bg-green-600 p-8" onClick={hostBtnClick}>Host Room</button>
-            <button className="bg-red-600 p-8" onClick={joinBtnClick}>Join Room</button>
-            </>
-            }
-            {joinClicked && (
-                <form onSubmit={codeSubmit}>
-                    <input type="text" placeholder="Enter room code" className="p-4" value={code} onChange={(e) => setCode(e.target.value)}/>
-                    <button type="submit" className="bg-transparent font-semibold border p-4">Go</button>
-                </form>
-            )}
-        </div>
+        <>
+            <div className={`flex ${joinClicked ? 'justify-center' : 'justify-between'} items-center h-screen px-[800px]`}>
+                {!joinClicked &&
+                <>
+                <button className="bg-blue-400 rounded-md p-8" onClick={hostBtnClick}>Host Room</button>
+                <button className="bg-purple-500 rounded-md p-8" onClick={joinBtnClick}>Join Room</button>
+                </>
+                }
+                {joinClicked && (
+                    <form onSubmit={codeSubmit}>
+                        <input type="text" placeholder="Enter room code" className="p-4" value={code} onChange={(e) => setCode(e.target.value)}/>
+                        <button type="submit" className="bg-transparent font-semibold border p-4">Go</button>
+                    </form>
+                )}
+            </div>
+        </>
     );
 }
