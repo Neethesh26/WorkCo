@@ -3,7 +3,7 @@ $loops = Math.round(100 / $step);
 $increment = 360 / $loops;
 $half = Math.round($loops / 2);
 $barColor = '#ec366b';
-$backColor = '#feeff4';
+$backColor = '#ffedf3';
 
 $(function(){
   clock.init();
