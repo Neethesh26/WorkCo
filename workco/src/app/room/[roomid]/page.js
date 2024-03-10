@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { Image } from 'three';
 
 export default function HomePage() {
   const divRef = useRef(null);
@@ -190,5 +191,5 @@ export default function HomePage() {
     }
   }, []);
 
-  return <div><div ref={divRef} /></div>;
+  return <div><div ref={divRef} /> <Image /></div>;
 }
