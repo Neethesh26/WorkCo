@@ -3,6 +3,7 @@
 import { getAuth } from "firebase/auth";
 import { navigate } from "@/app/actions/redirect";
 import { useState } from "react";
+import FriendList from "./FriendList";
 
 export default function HomePage() {
     const hostBtnClick = () => {
@@ -31,10 +32,7 @@ export default function HomePage() {
                 </>
                 }
                 {joinClicked && (
-                    <form onSubmit={codeSubmit}>
-                        <input type="text" placeholder="Enter room code" className="p-4" value={code} onChange={(e) => setCode(e.target.value)}/>
-                        <button type="submit" className="bg-transparent font-semibold border p-4">Go</button>
-                    </form>
+                    <FriendList />
                 )}
             </div>
         </>
