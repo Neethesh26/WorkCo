@@ -28,7 +28,7 @@ export default function ToDoList() {
     };
 
     return (
-        <div className="flex items-center justify-center h-screen bg-[#fff1cc]">
+        <div className="flex items-center justify-center h-screen ">
         <Head>
             <title>To-Do List</title>
         </Head>
@@ -43,12 +43,12 @@ export default function ToDoList() {
                 type="text"
                 value={taskInput}
                 onChange={(e) => setTaskInput(e.target.value)}
-                className="flex-1 shadow appearance-none border rounded py-2 px-3 text-grey-darker"
+                className="flex-1 shadow appearance-none border rounded py-2 px-3"
                 placeholder="Add a task"
                 />
                 <button
                 onClick={addTask}
-                className="ml-2 flex-no-shrink p-2 rounded text-white bg-teal-400 hover:bg-teal-500 focus:outline-none focus:shadow-outline"
+                className="ml-2 flex-no-shrink p-2 rounded text-white bg-pink-200 hover:bg-pink-600 focus:outline-none focus:shadow-outline"
                 >
                 Add
                 </button>

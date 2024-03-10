@@ -54,14 +54,14 @@ export default function CountdownTimer() {
   function handleResetTimer() {
     setSetActive(false);
     setHours(0);
-    setMinute(0);
-    setSeconds(10);
+    setMinute(1);
+    setSeconds(0);
   }
 
   const disableStartBtn = hours === 0 && minutes === 0 && seconds === 0;
 
   return (
-    <div className="flex bg-white-800 text-black min-h-screen items-center justify-center p-8 flex-col">
+    <div className="flex pb-8 flex-col">
       {/* min */}
       {/* sec */}
 
@@ -115,16 +115,6 @@ export default function CountdownTimer() {
             </select>
             <p className="text-sm ml-1 ">s</p>
           </div>
-        </section>
-
-        {/* buttuons */}
-        <section className="flex gap-16 text-4xl ">
-          <button
-            onClick={handleResetTimer}
-            className=" hover:opacity-80 hover:scale-105 transition-all"
-          >
-            <GrPowerReset />
-          </button>
           <button
             className={` hover:opacity-80 hover:scale-105 transition-all ${
               disableStartBtn && "cursor-not-allowed"
@@ -136,8 +126,8 @@ export default function CountdownTimer() {
 
             {/* <FaCirclePause /> */}
           </button>
-          <div />
         </section>
+
       </main>
     </div>
   );

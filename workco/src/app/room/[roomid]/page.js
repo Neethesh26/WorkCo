@@ -4,7 +4,8 @@ import React, { useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import "./globals.css";
 import Experience from "./Experience/Experience.js";
-import { data } from 'autoprefixer';
+import ToDoList from '@/app/components/ToDoList';
+import CountdownTimer from '@/app/components/Countdown';
 
 const ExperiencePage = ({ params }) => {
   const canvasRef = useRef(null);
@@ -56,6 +57,11 @@ const ExperiencePage = ({ params }) => {
               <h1 class="hero-main-title">Aditya M.</h1>
               <p class="hero-main-description">Working On - <a class="work">Algorithms Coursework</a></p>
             </div>
+
+            <div class="timer">
+              < CountdownTimer />
+            </div>
+            <div></div>
 
             <div class="hero-second">
               <p class="hero-second-subheading first-sub">Room</p>

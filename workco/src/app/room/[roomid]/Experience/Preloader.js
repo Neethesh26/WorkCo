@@ -324,6 +324,18 @@ export default class Preloader extends EventEmitter {
                     },
                     "chair"
                 )
+                .to(
+                    ".timer",
+                    {
+                        opacity: 1,
+                    }
+                )
+                .to(
+                    ".todo",
+                    {
+                        opacity: 1,
+                    }
+                )
         });
     }
 

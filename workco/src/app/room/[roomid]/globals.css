@@ -427,7 +427,20 @@ svg{
   font-size: 15px;
 }
 
+.timer {
+  color: var(--color-text);
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+}
 
+.todo {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+}
 /* Other colors override */
 
 .blue-text{
