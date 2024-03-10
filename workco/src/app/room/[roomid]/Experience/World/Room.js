@@ -50,6 +50,12 @@ export default class Room {
                 child.children[0].material.depthTest = false;
             }
 
+            if (child.name === "Computer") {
+                child.children[1].material = new THREE.MeshBasicMaterial({
+                    map: this.resources.items.screen,
+                });
+            }
+
             if (child.name === "Mini_Floor") {
                 child.position.x = -0.289521;
                 child.position.z = 8.83572;
@@ -112,7 +118,7 @@ export default class Room {
         window.addEventListener("mousemove", (e) => {
             this.rotation =
                 ((e.clientX - window.innerWidth / 2) * 2) / window.innerWidth;
-            this.lerp.target = this.rotation * 0.05;
+            this.lerp.target = this.rotation * 0.2;
         });
     }
 
