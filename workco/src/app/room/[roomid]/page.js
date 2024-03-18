@@ -55,7 +55,7 @@ const ExperiencePage = ({ params }) => {
 
             <div class="hero-main">
               <h1 class="hero-main-title">Aditya M.</h1>
-              <p class="hero-main-description">Working On - <a class="work">Algorithms Coursework</a></p>
+              <p class="hero-main-description">Working On - <a class="work">a Hackathon at KCL</a></p>
             </div>
 
             <div class="timer">
